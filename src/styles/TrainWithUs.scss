@@ -1,0 +1,142 @@
+@import "./colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans&family=Indie+Flower&family=Roboto:wght@100&family=Tektur&display=swap");
+.gallery {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: all 1s;
+  //   border: 2px solid rgb(255, 123, 0);
+}
+.gallerycarousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 70%;
+  margin: 2rem 0;
+  transition: all 0.5s;
+  margin: 0rem 2rem;
+  transition: all 1s;
+  //   border: 2px solid yellow;
+}
+
+.slide {
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 7px $boxShadowColor;
+  width: 100%;
+  height: 470px;
+  transition: all 1s;
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  filter: drop-shadow(0px 0px 5px $boxShadowColor);
+  width: 2rem;
+  height: 2rem;
+  color: $textColor;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
+}
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: $compliment;
+  height: 1px;
+  width: 10px;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px $boxShadowColor;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.indicator-inactive {
+  background-color: $textColor;
+}
+.gallery::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: $backgroundColor;
+  // opacity: 0.7;
+  z-index: -5;
+}
+.rightContainerGallery {
+  position: relative;
+  color: $textColor;
+  width: 45%;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  //   border: 2px solid yellow;
+}
+.slideHeading {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  // border: 2px red;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  background-color: $backgroundColor;
+  text-align: center;
+  //   border: 2px solid green;
+}
+.slideHeading-hidden {
+  display: none;
+}
+.slideDescription {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  width: 100%;
+  // border: 2px red;
+  //   background-color: red;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  background-color: $backgroundColor;
+  text-align: center;
+}
+.slideDescription-hidden {
+  display: none;
+}
+.infoGallery {
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+.slideHeading::first-letter {
+  color: $compliment;
+}
+

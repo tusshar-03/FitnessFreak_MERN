@@ -1,0 +1,50 @@
+@import "./colors.scss";
+.Container {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  //   margin: 7rem 0rem;
+  // border: 2px solid yellow;
+}
+.Container h1 {
+  margin-top: 7rem;
+  color: $textColor;
+  // border: 2px solid yellow;
+}
+.healthCol {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+  margin: 2rem;
+  // border: 2px solid red;
+}
+.healthColContainer {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0rem;
+  // border: 2px solid rgb(47, 255, 106);
+}
+.Container::before {
+  content: "";
+  background-color: $backgroundColor;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  z-index: -6;
+}
+.Container h1::before {
+  color: $compliment;
+  content: "Health";
+}

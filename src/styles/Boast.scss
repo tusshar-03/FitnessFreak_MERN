@@ -1,0 +1,131 @@
+@import "./colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans&family=Indie+Flower&family=Roboto:wght@100&family=Tektur&display=swap");
+.boast {
+  display: flex;
+  justify-content: space-between;
+}
+.left-h {
+  padding: 2rem;
+  padding-top: 1.5rem;
+  flex: 3;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+.right-h {
+  flex: 1;
+  position: relative;
+  z-index: 3;
+  background-color: $compliment;
+}
+.the-best-ad {
+  margin-top: 4rem;
+  background-color: $backgroundColor2;
+  border-radius: 4rem;
+  width: fit-content;
+  padding: 20px 13px;
+  text-transform: uppercase;
+  color: $textColor;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.the-best-ad > span {
+  z-index: 2;
+}
+.the-best-ad > div {
+  position: absolute;
+  background-color: $compliment;
+  width: 5.4rem;
+  height: 80%;
+  left: 8px;
+  border-radius: 3rem;
+  z-index: 1;
+}
+.boast-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: $textColor;
+  text-overflow: inherit;
+}
+.boast-text > div > span {
+  font-family: "Tektur", cursive;
+}
+.boast-text > div {
+  font-family: "Tektur", cursive;
+}
+.boast-text > div:nth-of-type(3) {
+  font-size: 1.4rem;
+  font-weight: 200;
+  text-transform: none;
+  letter-spacing: 1.5px;
+  width: 80%;
+}
+.figures {
+  display: flex;
+  gap: 2rem;
+}
+.figures > div {
+  display: flex;
+  flex-direction: column;
+}
+.figures > div > span:nth-of-type(1) {
+  color: $textColor;
+  font-size: 2rem;
+}
+.figures > div > span:nth-of-type(2) {
+  color: $textColor;
+  text-transform: uppercase;
+}
+.boast-buttons {
+  display: flex;
+  gap: 1rem;
+  font-weight: normal;
+}
+.boast-buttons > :nth-child(1) {
+  color: white;
+  background-color: $compliment;
+  width: 8rem;
+}
+.boast-buttons > :nth-child(2) {
+  color: white;
+  background-color: transparent;
+  width: 8rem;
+  border: 2px solid $compliment;
+}
+.right-h > .boastbtn {
+  position: absolute;
+  right: 3rem;
+  top: 2rem;
+  width: fit-content;
+  color: black;
+}
+.boast-image {
+  position: absolute;
+  z-index: 4;
+  height: 500px;
+  width: 500px;
+  top: 4rem;
+  right: 8rem;
+  width: 18rem;
+}
+.boast-image-back {
+  position: absolute;
+  top: 4rem;
+  right: 30rem;
+  z-index: 2;
+  width: 15rem;
+}
+.figures>div>span{
+  font-family: "Tektur", cursive;
+}
+.boast-blur{
+  width: 20rem;
+  height: 30rem;
+  left: 0;
+}

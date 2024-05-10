@@ -1,0 +1,277 @@
+@import "./colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans&family=Indie+Flower&family=Roboto:wght@100&family=Tektur&display=swap");
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: $backgroundColor;
+  font-family: "Tektur", cursive;
+  > main {
+    position: relative;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+
+    > .quote h1 {
+      font-size: 60px;
+      color: $textColor;
+      font-family: "Tektur", cursive;
+      line-height: 2.3em;
+    }
+    > .theme2 div {
+      width: 100%;
+      font-size: 20px;
+      color: $textColor;
+      font-family: "Tektur", cursive;
+      line-height: 2.3em;
+    }
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../assets/backgroundpic.jpeg") no-repeat center
+      center/cover;
+    opacity: 0.7;
+  }
+}
+.quote {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.quote h1 {
+  font-size: 50px;
+  color: $textColor;
+}
+.quote #animation1 {
+  filter: invert(100%);
+  // box-shadow: 0px 5px 5px $boxShadowColor
+}
+.quote #animation2 {
+  filter: invert(100%);
+  // box-shadow: 0px 5px 5px $boxShadowColor
+}
+.quote h1::before {
+  color: $compliment;
+  content: "Make";
+}
+.theme2 {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.extraInfo {
+  width: 70%;
+  display: flex;
+  margin: auto;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+// Home1 done
+.home2Parent {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.home2Parent h1::before {
+  color: $compliment;
+  content: "Leave";
+}
+.home2Parent::before {
+  content: "";
+  background-color: $backgroundColor;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.home2 {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.home2Parent h1 {
+  margin: 1rem 0rem;
+  font-size: 3rem;
+}
+// Home 2 done
+
+// About CSS starts
+
+.about {
+  display: flex;
+  flex-direction: row;
+}
+
+.about .left-content {
+  width: 50%;
+  text-align: right;
+  background: $compliment;
+  position: relative;
+}
+
+.about .left-content .left-content-img {
+  padding-top: 90px;
+  padding-bottom: 110px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+
+.about .left-content .left-content-img img {
+  position: relative;
+  z-index: 9;
+  height: 100%;
+}
+
+.about .left-content .left-content-text {
+  position: absolute;
+  top: 34%;
+  right: 4%;
+}
+
+.about .left-content .left-content-text h3 {
+  color: $textColor;
+  font-size: 68px;
+  font-weight: 300;
+  line-height: 70px;
+  text-transform: capitalize;
+}
+
+.about .left-content .left-content-text h3 span {
+  font-weight: 600;
+}
+
+.about .right-content {
+  position: relative;
+  width: 50%;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: $textColor;
+  overflow: hidden;
+  // border: 2px solid white;
+}
+
+.about .right-content::before {
+  content: "";
+  background-color: $backgroundColor;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+// About css ends
+.home3 {
+  width: 100%;
+  height: 120vh;
+  background-color: $backgroundColor;
+  // margin-top: -200px;
+  display: flex;
+  > div {
+    width: 70%;
+    height: 100vh;
+    background-color: $textColor;
+    // border-radius: 0 200px 200px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    > h1 {
+      text-transform: uppercase;
+      border-bottom: 2px solid $fourth;
+      padding: 0.5rem;
+      width: 15rem;
+      color: black;
+    }
+    > p {
+      padding: 5rem;
+      letter-spacing: 1px;
+      word-spacing: 5px;
+      line-height: 170%;
+      font: italic 100 1.2rem $text2;
+    }
+  }
+}
+.foranimation {
+  width: 100%;
+  // height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.foranimation img {
+  height: 100px;
+  width: 100px;
+  margin: 40px;
+}
+#animation1 {
+  animation: myAnimation 2s ease-in-out 0s infinite alternate;
+}
+#animation2 {
+  animation: myAnimation 2s ease-in-out 1s infinite alternate;
+}
+@keyframes myAnimation {
+  50% {
+    transform: translateY(+20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.home4 {
+  background-color: black;
+}
+@keyframes imgUp {
+  to {
+    transform: translateY(-10px);
+  }
+}
+.trainsec {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+.trainsec::before {
+  content: "";
+  background-color: $backgroundColor;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.trainsec h1::before {
+  color: $compliment;
+  content: "Train";
+}
+.trainsec h1 {
+  margin: 2rem 0rem;
+  font-size: 3rem;
+}
